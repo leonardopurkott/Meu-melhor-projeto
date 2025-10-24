@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quick Med • Login</title>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <nav>
-      <h1>Quick Med</h1>
-      <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <div class="overlay"></div>
-    <div class="login-box">
-      <h2>Bem-vindo(a)</h2>
-      <p>Faça login para acessar o painel do hospital</p>
-      <form>
-        <input type="email" placeholder="E-mail" required>
-        <input type="password" placeholder="Senha" required>
-        <button type="submit">Entrar</button>
-        <p class="link">Esqueceu a senha? <a href="#">Recuperar</a></p>
-      </form>
+  <!-- Tela de boas-vindas -->
+  <section id="welcome-screen" class="screen">
+    <div class="welcome-card">
+      <img src="logo.png" alt="Quick Med Logo" class="logo">
+      <h1 class="app-name">Quick Med</h1>
+      <p class="subtitle">Bem-vindo</p>
+      <div class="continue">
+        <div class="arrow-circle">↑</div>
+        <p>Clique para continuar</p>
+      </div>
     </div>
-    <h1 class="background-title">Quick Med</h1>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Quick Med. Todos os direitos reservados.</p>
-  </footer>
+  <!-- Tela de login -->
+  <section id="login-screen" class="screen hidden">
+    <div class="login-card">
+      <img src="logo.png" alt="Quick Med Logo" class="logo">
+      <h1 class="app-name">Quick Med</h1>
+      <p class="subtitle">Realize seu login</p>
 
-</body>
-</html>
+      <form>
+  <label for="email">Informe seu email:</label>
+  <input 
+    type="email" 
+    id="email" 
+    placeholder="exemplo@gmail.com" 
+    required
+  >
+
+  <label for="senha">Informe sua senha:</label>
+  <input 
+    type="password" 
+    id="senha" 
+    placeholder="************" 
+    required
+  >
+
+  <a href="#" class="forgot">Esqueci minha senha.</a>
+
+  <button type="submit" class="btn-primary">ACESSAR</button>
+
+  <p class="new-user">Novo por aqui?</p>
+  <button type="button" class="btn-secondary">CADASTRE-SE</button>
+</form>

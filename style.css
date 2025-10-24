@@ -1,0 +1,177 @@
+:root {
+  --azul-escuro: #005c99;
+  --azul: #0077c2;
+  --cinza-claro: #e6e6e6;
+  --texto: #0b2e4a;
+}
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--azul);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.screen {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--azul);
+  transition: opacity 0.8s ease, transform 1s ease;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(50px);
+}
+
+/* ======== TELA DE BOAS-VINDAS ======== */
+.welcome-card {
+  width: 90%;
+  max-width: 380px;
+  background: var(--cinza-claro);
+  border-radius: 0 0 100px 100px;
+  text-align: center;
+  padding: 60px 20px 120px;
+  position: relative;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.app-name {
+  color: var(--texto);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--texto);
+}
+
+.continue {
+  position: absolute;
+  bottom: -100px;
+  width: 100%;
+  background: var(--azul);
+  color: white;
+  border-radius: 100px 100px 0 0;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+
+.arrow-circle {
+  background: var(--cinza-claro);
+  color: var(--azul);
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ======== TELA DE LOGIN ======== */
+.login-card {
+  width: 90%;
+  max-width: 380px;
+  background: var(--azul);
+  color: white;
+  text-align: center;
+  border-radius: 0 0 100px 100px;
+  padding: 50px 20px 80px;
+  position: relative;
+}
+
+.login-card img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.login-card h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.login-card .subtitle {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+form {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 0.9rem;
+}
+
+input {
+  background: var(--cinza-claro);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.forgot {
+  color: white;
+  font-size: 0.85rem;
+  text-align: right;
+  display: block;
+  margin-top: 5px;
+  text-decoration: underline;
+}
+
+.btn-primary, .btn-secondary {
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background: var(--texto);
+  color: white;
+}
+
+.btn-secondary {
+  background: var(--azul-escuro);
+  color: white;
+}
+
+.new-user {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (min-width: 700px) {
+  .welcome-card, .login-card {
+    max-width: 420px;
+  }
+}
